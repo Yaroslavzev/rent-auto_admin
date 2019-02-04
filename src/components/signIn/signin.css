@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.signin_wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.registration_form {
+    width: 30vw;
+}
+
+.registration_form h2 {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: block;
+    width: 50%;
+}
+
+.registration_field {
+    padding: 15px 20px;
+    width: 90%;
+    border: 1px solid #ccc;
+    display: block;
+    border-radius: 2px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.registration_field:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.registration_field:focus {
+    outline: none;
+    border-bottom: 1px solid green;
+}
+
+.registration_field:focus:invalid {
+    border-bottom: 1px solid red;
+}
+
+.error_label {
+    color: red;
+    margin: 5px;
+}

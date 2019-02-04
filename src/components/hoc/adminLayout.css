@@ -1,0 +1,15 @@
+.admin_container {
+    display: flex; 
+  
+}
+
+.admin_left_pannel {
+    min-height: 100vh;
+    background: #282828;
+    border-right: 2px solid #01285e;
+    
+}
+
+.admin_right_pannel {
+flex-grow: 1;
+}

@@ -1,0 +1,56 @@
+.car_edit_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.car_edit_form {
+    margin-top: 20px;
+    width: 300px; 
+
+}
+
+.car_edit_form select,
+.car_edit_form textarea {
+
+    width: 340px; 
+
+}
+
+.car_edit_form textarea {
+    min-height: 100px;
+    padding: 5px 10px;
+}
+
+
+.edit_car_formField{
+    display: block;
+    width: 300px;
+    padding: 10px 20px; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px; 
+}
+
+.edit_car_formField:focus{
+    outline: none;
+}
+
+.car_edit_label{
+    padding: 2px;
+     background: lightblue;
+     text-align: center;
+     font-size: 16px;
+     margin: 10px 0 5px;
+}
+
+.label_success {
+    font-size: 18px;
+    color: green;
+}
+
+.label_error{
+    font-size: 18px;
+    color: red;
+}
