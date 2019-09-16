@@ -48,7 +48,7 @@ export const auth = (email, password) =>{
             }
         }
       
-        axios.post('https://api.rentauto.xyz/auth/sign_in', authData)
+        axios.post('http://api.rentauto.xyz/auth/sign_in', authData)
         .then( response => { 
             console.log(response)
             const expirationTime = 3600;
