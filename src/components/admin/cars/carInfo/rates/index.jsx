@@ -107,7 +107,7 @@ class RentalRates extends Component {
     const id = this.props.id;
 
     axios
-      .get(`https://api.rent-auto.biz.tm/info_models/${id}`, getHeaders())
+      .get(`https://api.rentauto.xyz/info_models/${id}`, getHeaders())
       .then(res => {
         const options = { ...this.state.options };
         const formdata = { ...this.state.formdata };

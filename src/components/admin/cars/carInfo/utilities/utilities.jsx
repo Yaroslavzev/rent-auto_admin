@@ -67,7 +67,7 @@ export const formIsValidRates = (id, formdata, options) => {
     };
     axios
       .patch(
-        `https://api.rent-auto.biz.tm/info_models/${id}`,
+        `https://api.rentauto.xyz/info_models/${id}`,
         data,
         getHeaders()
       )
@@ -106,7 +106,7 @@ export const formIsValid = (id, formdata, uploadImage, selectedFile) => {
 
       axios
         .patch(
-          `https://api.rent-auto.biz.tm/models/${id}`,
+          `https://api.rentauto.xyz/models/${id}`,
           model,
           getHeaders()
         )
@@ -125,7 +125,7 @@ export const formIsValid = (id, formdata, uploadImage, selectedFile) => {
       };
 
       axios
-        .post(`https://api.rent-auto.biz.tm/models`, model, getHeaders())
+        .post(`https://api.rentauto.xyz/models`, model, getHeaders())
         .then(res => {
           const newCarId = res.data.id;
           uploadImage(newCarId, model);

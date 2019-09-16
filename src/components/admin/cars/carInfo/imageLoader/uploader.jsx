@@ -63,7 +63,7 @@ class Uploader extends Component {
   };
 
   selectHandler = event => {
-    const selectedFile = `https://srv.rent-auto.biz.tm/images/models/${
+    const selectedFile = `https://srv.rentauto.xyz/images/models/${
       this.props.id
     }/${event.target.value}`;
     this.props.selectedFile(selectedFile);

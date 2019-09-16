@@ -21,7 +21,7 @@ class Cars extends Component {
 
   componentDidMount() {
     axios
-      .get(`https://api.rent-auto.biz.tm/info_models`, getHeaders())
+      .get(`https://api.rentauto.xyz/info_models`, getHeaders())
       .then(res => {
         const list = res.data
           .sort((a, b) => (a.id > b.id ? 1 : b.id > a.id ? -1 : 0))
@@ -40,12 +40,12 @@ class Cars extends Component {
       this.setState({ cars: filterArray });
 
       axios
-        .delete(`https://api.rent-auto.biz.tm/models/${id}`, getHeaders())
+        .delete(`https://api.rentauto.xyz/models/${id}`, getHeaders())
         .then(res => {});
 
       axios
         .delete(
-          `https://srv.rent-auto.biz.tm/images/models/${id}`,
+          `https://srv.rentauto.xyz/images/models/${id}`,
           getHeaders()
         )
         .then(res => {});

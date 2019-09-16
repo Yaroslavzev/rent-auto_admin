@@ -40,7 +40,7 @@ class addItem extends Component {
     } 
     if (valid) {
       axios
-        .post(`https://api.rent-auto.biz.tm/additions`, data, getHeaders())
+        .post(`https://api.rentauto.xyz/additions`, data, getHeaders())
         .then(res => {
           const response = res.data;
           this.props.onAddHandler(response, null)

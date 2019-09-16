@@ -25,7 +25,7 @@ export const submit = (data) => {
     return dispatch=>{
         dispatch(submitStart()); 
         const sendData = JSON.stringify(data);
-        axios.post('https://api.rent-auto.biz.tm/info_models', sendData).then(response=>{
+        axios.post('https://api.rentauto.xyz/info_models', sendData).then(response=>{
             console.log(response.data)
         }).catch(error=>{
             dispatch(submitFail(error))

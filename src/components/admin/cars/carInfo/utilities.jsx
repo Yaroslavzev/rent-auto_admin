@@ -66,7 +66,7 @@ export const formIsValidRates = (id, formdata, options) => {
     };
     axios
       .patch(
-        `https://api.rent-auto.biz.tm/info_models/${id}`,
+        `https://api.rentauto.xyz/info_models/${id}`,
         data,
         getHeaders()
       )
@@ -112,7 +112,7 @@ export const formIsValid = (
       };
 
       axios
-        .patch(`https://api.rent-auto.biz.tm/models/${id}`, model, getHeaders())
+        .patch(`https://api.rentauto.xyz/models/${id}`, model, getHeaders())
         .then(res => {});
       return true;
     } else {
@@ -128,7 +128,7 @@ export const formIsValid = (
       };
 
       axios
-        .post(`https://api.rent-auto.biz.tm/models`, model, getHeaders())
+        .post(`https://api.rentauto.xyz/models`, model, getHeaders())
         .then(res => {
           const newCarId = res.data.id;
           autoUploadImage(setState, newCarId, model, uploadedFile, history);
@@ -150,7 +150,7 @@ export const autoUploadImage = (setState, id, model, uploadedFile, history) => {
     setState({ isLoading: true });
     axios
       .post(
-        `https://srv.rent-auto.biz.tm/images/models/${id}`,
+        `https://srv.rentauto.xyz/images/models/${id}`,
         fd,
         getHeaders()
       )
@@ -161,7 +161,7 @@ export const autoUploadImage = (setState, id, model, uploadedFile, history) => {
         const obj = { ...model };
         obj["link"] = selectedFile;
         axios
-          .patch(`https://api.rent-auto.biz.tm/models/${id}`, obj, getHeaders())
+          .patch(`https://api.rentauto.xyz/models/${id}`, obj, getHeaders())
           .then(() => {
             history.push("/dashboard/cars");
             setState({ isLoading: false });
@@ -174,7 +174,7 @@ export const autoUploadImage = (setState, id, model, uploadedFile, history) => {
 export const getCarData = (setState, id, updateFormFields) => {
   if (id) {
     axios
-      .get(`https://api.rent-auto.biz.tm/info_models`, getHeaders())
+      .get(`https://api.rentauto.xyz/info_models`, getHeaders())
       .then(res => {
         let car;
         for (let key in res.data) {
@@ -202,7 +202,7 @@ export const getCarData = (setState, id, updateFormFields) => {
 
 // GET THE BRANDS
 export const getBrands = (setState, stateOptions) => {
-  axios.get(`https://api.rent-auto.biz.tm/brands`, getHeaders()).then(res => {
+  axios.get(`https://api.rentauto.xyz/brands`, getHeaders()).then(res => {
     const brands = makeNewObject(res.data, [], "name");
     const options = { ...stateOptions };
     options.brand = [...brands];

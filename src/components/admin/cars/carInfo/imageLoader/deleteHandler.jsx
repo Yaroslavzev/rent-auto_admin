@@ -15,7 +15,7 @@ export const replaceImage = (
   return new Promise((resolve, reject) => {
     axios
       .delete(
-        `https://srv.rent-auto.biz.tm/images/models/${id}/${name}`,
+        `https://srv.rentauto.xyz/images/models/${id}/${name}`,
         getHeaders()
       )
       .then(res => {
@@ -26,7 +26,7 @@ export const replaceImage = (
           if (res.length > 0) {
             data = {
               name: res[0].name,
-              selectedFile: `https://srv.rent-auto.biz.tm/images/models/${id}/${
+              selectedFile: `https://srv.rentauto.xyz/images/models/${id}/${
                 res[0].name
               }`
             };

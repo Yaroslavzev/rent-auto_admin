@@ -30,7 +30,7 @@ class ListItem extends Component {
     }
     if(valid) {
       const data = {...this.state.data}
-        axios.patch(`https://api.rent-auto.biz.tm/additions/${this.props.id}`, data, getHeaders()).then(res=>{
+        axios.patch(`https://api.rentauto.xyz/additions/${this.props.id}`, data, getHeaders()).then(res=>{
           const response = res.data
           this.props.onEditSubmit(response, this.props.id);
           }).catch(error =>{
@@ -55,7 +55,7 @@ class ListItem extends Component {
 
   onDeleteHandler=()=>{
     if(window.confirm('удалить ?')){
-      axios.delete(`https://api.rent-auto.biz.tm/additions/${this.props.id}`, getHeaders()).then(res=>{
+      axios.delete(`https://api.rentauto.xyz/additions/${this.props.id}`, getHeaders()).then(res=>{
       console.log('item removed from the list')
       })
       this.props.Delete(this.props.id)

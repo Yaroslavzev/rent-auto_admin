@@ -1,5 +1,5 @@
-Admin dashboard for a car leasing website at https://rent-auto.biz.tm/cars 
-the dashboard is at https://adm.rent-auto.biz.tm/
+Admin dashboard for a car leasing website at https://rentauto.xyz/cars 
+the dashboard is at https://adm.rentauto.xyz/
 
 The program is an integrated application with server and client parts.
 The functionality of admin part of the site is using React JS 

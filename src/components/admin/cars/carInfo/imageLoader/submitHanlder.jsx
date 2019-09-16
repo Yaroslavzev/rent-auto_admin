@@ -12,7 +12,7 @@ export const submitUpload = (setState, id, img, uploadedFile, sendSelectedFile) 
     fd.append("file", data, name);
     axios
       .post(
-        `https://srv.rent-auto.biz.tm/images/models/${id}`,
+        `https://srv.rentauto.xyz/images/models/${id}`,
         fd,
         getHeaders()
       )

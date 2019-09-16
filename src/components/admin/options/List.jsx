@@ -29,7 +29,7 @@ class List extends Component {
   
   getList = () => {
     axios
-      .get("https://api.rent-auto.biz.tm/additions", getHeaders())
+      .get("https://api.rentauto.xyz/additions", getHeaders())
       .then(res => {
         const list = res.data;
         const lastId = nextId(list)
